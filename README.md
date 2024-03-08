@@ -12,10 +12,10 @@ Desenvolvimento Back-end para o projeto nomeado "listou".
 O projeto listou tem como objetivo, ser um aplicativo para dispositivos móveis, com o intuito de realizar
 listagem, consulta e auxiliar na economia financeira de seus usuários.
 
-- [ ] 1. construir api base onde serao implementadas as rotas
-- [ ] 2. publicar projeto na vercel para ser acessado pelo app listou
+- [x] 1. construir api base onde serao implementadas as rotas
+- [x] 2. publicar projeto na vercel para ser acessado pelo app listou
 - [ ] 3. implementar nossas rotas
-- [ ] 4. integrar api com firebase para persistencia de dados
+- [x] 4. integrar api com firebase para persistencia de dados
 - [ ] 5. alimentar alguns dados para nossos testes
 - [ ] 6. fazer o app buscar os dados nessa API
 - [ ] 7. adicionar autenticacao as rotas
