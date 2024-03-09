@@ -19,4 +19,19 @@ export class UserRepository {
     const user = { id: item.id, ...item.data() };
     return user;
   }
+
+  public async getUserByLogin(userName: string): Promise<any> {
+    const collection = await this._collectionRef
+      .where("username", "==", userName)
+      .get();
+    const users = collection.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    if (users && users.length > 0) {
+      return users[0];
+    } else {
+      return [];
+    }
+  }
 }
