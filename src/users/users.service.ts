@@ -2,13 +2,11 @@ import { Injectable } from "@nestjs/common";
 import { CreateUserDto } from "./dto/create-user.dto";
 import { UpdateUserDto } from "./dto/update-user.dto";
 import { UserRepository } from "./users.repository";
+import { User } from "./entities/user.entity";
 
 @Injectable()
 export class UsersService {
   private usersRepository = new UserRepository();
-  create(createUserDto: CreateUserDto) {
-    return "This action adds a new user";
-  }
 
   async findAll() {
     const ret = await this.usersRepository.getAllUsers();
@@ -27,11 +25,19 @@ export class UsersService {
     return ret;
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  async create(newuser: User) {
+    const ret = await this.usersRepository.createUser(newuser);
+    return ret;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  async update(user: User) {
+    const ret = await this.usersRepository.updateUser(user);
+    return ret;
+  }
+
+  async remove(username: string) {
+    // return `This action removes a #${id} user`;
+    const ret = await this.usersRepository.removeUser(username);
+    return ret;
   }
 }
