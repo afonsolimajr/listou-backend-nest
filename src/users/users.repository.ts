@@ -28,10 +28,6 @@ export class UserRepository {
       id: doc.id,
       ...doc.data(),
     }));
-    if (users && users.length > 0) {
-      return users[0];
-    } else {
-      return [];
-    }
+    return users;
   }
 }
