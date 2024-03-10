@@ -1,18 +1,18 @@
 # LISTOU - Backend (versão Nest.js)
 
-## Desenvolvedor: Afonso Lima (Mobile and Web)
+## Desenvolvedor: Afonso Lima (Desenvolvedor Web e Mobile)
 
 ## Contato: <https://github.com/afonsolimajr>
 
-## Desenvolvedor: Willian Valentim (DevSecOps and Back-end Java)
+## Desenvolvedor: Willian Valentim (DevSecOps)
 
 ## Contato: <https://github.com/w4lentim>
 
-## Desenvolvedora: Ana Carolina Bezerra de Lira Vasconcelos
+## Desenvolvedora: Ana Carolina Bezerra de Lira Vasconcelos (Desenvolvedora Front-End, Mobile e UI/UX)
 
 ## Contato: <https://github.com/caroldelira>
 
-## Desenvolvedor: Paulo Fernando Oliveira Lins
+## Desenvolvedor: Paulo Fernando Oliveira Lins (Desenvolvedor Python)
 
 ## Contato: <https://github.com/pauloemc2>
 
