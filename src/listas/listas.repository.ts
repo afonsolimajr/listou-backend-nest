@@ -39,17 +39,15 @@ export class ListaRepository {
       : { status: "error", message: "Lista não foi atualizada" };
   }
 
-  public async remove(id: string): Promise<boolean> {
-    const listas = await this.get(id);
-    console.log("listas", listas);
-    if (listas && listas.length > 0) {
-      const lista = listas[0];
-      const document = await this._collectionRef.doc(lista.id);
-      const deleted = await document.delete();
-      console.log("deleted", deleted);
-      return !!deleted;
-    } else {
-      return false;
+  public async remove(
+    id: string,
+  ): Promise<{ status: string; message: string }> {
+    try {
+      const ret = await this._collectionRef.doc(id).delete();
+      console.log(ret);
+      return { status: "success", message: "Lista removida" };
+    } catch (error) {
+      return { status: "error", message: error };
     }
   }
 }
