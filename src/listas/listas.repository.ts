@@ -24,14 +24,9 @@ export class ListaRepository {
   public async create(
     lista: Lista,
   ): Promise<{ status: string; message: string }> {
-    const listas = await this.get(lista.id);
-    if (listas.length == 0) {
-      const document = await this._collectionRef.add(lista);
-      console.log("adicionado", document);
-      return { status: "success", message: "Lista adicionada" };
-    } else {
-      return { status: "error", message: "Lista já existe" };
-    }
+    const document = await this._collectionRef.add(lista);
+    console.log("adicionado", document);
+    return { status: "success", message: "Lista adicionada" };
   }
 
   public async update(
