@@ -2,11 +2,19 @@
 
 ## Desenvolvedor: Afonso Lima (Mobile and Web)
 
-## Contact: <https://github.com/afonsolimajr>
+## Contato: <https://github.com/afonsolimajr>
 
 ## Desenvolvedor: Willian Valentim (DevSecOps and Back-end Java)
 
-## Contact: <https://github.com/w4lentim>
+## Contato: <https://github.com/w4lentim>
+
+## Desenvolvedora: Ana Carolina Bezerra de Lira Vasconcelos
+
+## Contato: <https://github.com/caroldelira>
+
+## Desenvolvedor: Paulo Fernando Oliveira Lins
+
+## Contato: <https://github.com/pauloemc2>
 
 Desenvolvimento Back-end para o projeto nomeado "listou".
 
@@ -27,3 +35,8 @@ listagens, consultas e auxiliar seus clientes na organização de suas compras e
 - 1. Vercel: Utilizado na publicação e deploy da aplicação;
 - 2. Nest.js: É uma estrutura para criar aplicações eficientes e escaláveis do lado do servidor Node.js, utilizando a linguagem de programação JavaScript possuindo suporte total ao TypeScript e combina elementos de OOP (Programação Orientada a Objetos), FP (Programação Funcional) e FRP (Programação Reativa Funcional).
 - 3. Firebase: É uma plataforma de Backend-as-a-Service (BaaS), isto é, fornece uma infraestrutura de back-end.
+
+## OBS: Banco de dados relacional
+Caso seja de interesse do usuário replicar as relações de entidades em um banco relacional, acesse a pasta /database > database.sql e replique o script no banco de sua preferência.
+
+- diagrama-db.png -> Informa as relações de entidades e tabelas de dados do aplicativo.
