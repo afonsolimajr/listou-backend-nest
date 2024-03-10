@@ -26,11 +26,18 @@ export class UsersService {
   }
 
   async create(newuser: User) {
+    newuser.name = newuser.name.trim();
+    newuser.username = newuser.username.trim().toLowerCase();
+    newuser.email = newuser.email.trim().toLowerCase();
+
     const ret = await this.usersRepository.createUser(newuser);
     return ret;
   }
 
   async update(user: User) {
+    user.name = user.name.trim();
+    user.username = user.username.trim().toLowerCase();
+    user.email = user.email.trim().toLowerCase();
     const ret = await this.usersRepository.updateUser(user);
     return ret;
   }

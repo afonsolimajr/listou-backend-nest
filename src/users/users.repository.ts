@@ -23,7 +23,7 @@ export class UserRepository {
 
   public async getUserByLogin(userName: string): Promise<any> {
     const collection = await this._collectionRef
-      .where("username", "==", userName)
+      .where("username", "==", userName.toLowerCase().trim())
       .get();
     const users = collection.docs.map((doc) => ({
       id: doc.id,
@@ -35,6 +35,8 @@ export class UserRepository {
   public async createUser(
     newuser: User,
   ): Promise<{ status: string; message: string }> {
+    newuser.username = newuser.username.toLowerCase().trim();
+    newuser.email = newuser.email.toLowerCase().trim();
     const users = await this.getUserByLogin(newuser.username);
     if (users.length == 0) {
       const document = await this._collectionRef.add(newuser);
@@ -48,6 +50,8 @@ export class UserRepository {
   public async updateUser(
     user: any,
   ): Promise<{ status: string; message: string }> {
+    user.username = user.username.toLowerCase().trim();
+    user.email = user.email.toLowerCase().trim();
     const doc = this._collectionRef.doc(user.id);
     const updated = await doc.update(user);
     return updated
@@ -56,7 +60,7 @@ export class UserRepository {
   }
 
   public async removeUser(userName: string): Promise<boolean> {
-    const users = await this.getUserByLogin(userName);
+    const users = await this.getUserByLogin(userName.toLowerCase().trim());
     console.log("users", users);
     if (users && users.length > 0) {
       const user = users[0];
