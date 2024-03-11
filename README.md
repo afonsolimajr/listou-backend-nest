@@ -25,12 +25,12 @@ listagens, consultas e auxiliar seus clientes na organização de suas compras e
 
 ### Processo de desenvolvimento do aplicativo:
 
-- [ ] 1. Construção da API base para implementação das rotas;
-- [ ] 2. Publicação do projeto na Vercel;
-- [ ] 3. Implementação das rotas;
-- [ ] 4. Integrar API base com Firebase para persistência de dados;
-- [ ] 5. Inserção de dados para realização de testes locais;
-- [ ] 6. Realizar a checagem e busca de dados via API;
+- [x] 1. Construção da API base para implementação das rotas;
+- [x] 2. Publicação do projeto na Vercel;
+- [x] 3. Implementação das rotas;
+- [x] 4. Integrar API base com Firebase para persistência de dados;
+- [x] 5. Inserção de dados para realização de testes locais;
+- [x] 6. Realizar a checagem e busca de dados via API;
 - [ ] 7. Adicionar autenticação rotas.
 
 ## Ferramentas utilizadas no desenvolvimento Back-End do listou:
